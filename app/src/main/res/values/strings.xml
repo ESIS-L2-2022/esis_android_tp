@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">esis_android_tp</string>
+    <string name="app_name" translatable="false">esis_android_tp</string>
+    <string name="btn_text">Connexion</string>
 </resources>
