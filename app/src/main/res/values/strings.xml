@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">esis_android_tp</string>
-    <string name="btn_text">Connexion</string>
+    <string name="country_name">France</string>
+    <string name="Description">Blue. White. Red</string>
 </resources>
