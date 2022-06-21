@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:layout_margin="16dp"
     tools:context=".MainActivity">
 
     <ImageView
@@ -15,9 +16,20 @@
         android:src="@drawable/ic_france"
         />
 
-    <Button
+    <TextView
+        android:id="@+id/name_country"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_text"/>
+        android:layout_gravity="start"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/country_name"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Description"/>
 
 </LinearLayout>

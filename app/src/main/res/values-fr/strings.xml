@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="btn_text">Connexion</string>
+    <string name="country_name">France</string>
+    <string name="Description">La France, en forme longue depuis 1875 la République française, est un État souverain transcontinental dont le territoire métropolitain est situé en Europe de l Ouest, et dont le territoire ultramarin est situé dans les océans Indien, Atlantique et Pacifique ainsi qu en Amérique du Sud</string>
 </resources>
