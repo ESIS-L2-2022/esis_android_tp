@@ -27,18 +27,23 @@ public class MainActivity extends AppCompatActivity {
 
         Random ran = new Random();
 
-        int[] dices = {
-                R.drawable.dice_1,
-                R.drawable.dice_2,
-                R.drawable.dice_3,
-                R.drawable.dice_4,
-                R.drawable.dice_5,
-                R.drawable.dice_6,
-        };
         button.setOnClickListener(v -> {
             int i = ran.nextInt(6);
-            imageView.setImageResource(dices[i]);
-            Toast.makeText(this, "" + (i+1), Toast.LENGTH_SHORT).show();
+            imageView.setImageResource(imageSelect(i));
+            Toast.makeText(this, "" + (i), Toast.LENGTH_SHORT).show();
         });
+    }
+
+    private int imageSelect(int choice){
+        int c;
+        switch (choice) {
+            case 1 : c = R.drawable.dice_1; break;
+            case 2 : c = R.drawable.dice_2; break;
+            case 3 : c = R.drawable.dice_3; break;
+            case 4 : c = R.drawable.dice_4; break;
+            case 5 : c = R.drawable.dice_5; break;
+            default : c = R.drawable.dice_6; break;
+        }
+        return c;
     }
 }
