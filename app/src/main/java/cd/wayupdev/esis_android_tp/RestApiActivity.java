@@ -10,6 +10,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class RestApiActivity extends AppCompatActivity {
 
     private TextView tvName;
@@ -25,6 +28,7 @@ public class RestApiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rest_api);
 
         initialisation();
+        setEcouteurEvenement();
     }
 
     private void setEcouteurEvenement(){
@@ -45,7 +49,18 @@ public class RestApiActivity extends AppCompatActivity {
     private void recupererGithubUser(int id) {
         progressBar.setVisibility(View.VISIBLE);
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.github.com")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
+        GithubUserService userService = retrofit.create(GithubUserService.class);
+        GithubUser user = userService.getUser(id);
+
+        tvName.setText("Name" + user.getName());
+        tvLogin.setText("Login" + user.getLogin());
+        tvId.setText("Id : " + user.getId());
+        progressBar.setVisibility(View.GONE);
     }
 
     private void initialisation(){

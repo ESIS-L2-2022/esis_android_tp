@@ -6,5 +6,5 @@ import retrofit2.http.Path;
 public interface GithubUserService {
 
     @GET("/users/{id}")
-    void getUser(@Path("id") int id);
+    GithubUser getUser(@Path("id") int id);
 }
